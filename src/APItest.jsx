@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const APItest = () => {
-  // Test API Call for ipgeolocation, current time (not specified), in Denver, CO
+  // Test API Call for ipgeolocation, current time, in Denver, CO
   const ipgApiKey = "c219cd1bd2f04e179ca9bb7d441e4493";
   const [ipgData, setIpgData] = useState(null);
 
@@ -15,7 +15,6 @@ const APItest = () => {
   };
 
   // Test API Call for Farmsense API. Location not required, date in Unix timestamp
-  // pulled from online, not created dynamically here
   const [farmsenseData, setFarmsenseData] = useState(null);
 
   const getFarmsenseData = async () => {
