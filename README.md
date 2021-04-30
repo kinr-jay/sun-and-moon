@@ -77,49 +77,78 @@ displayed. There will be separate pages for the sun and the moon. The user will 
 
 ## Time/Priority Matrix 
 
-[Link]()
+- [Link](https://res.cloudinary.com/kinr-jay/image/upload/v1619799305/GA/Sun%20and%20Moon%20Project/sun-and-moon-time-matrix_yqjzdr.jpg)
 
 ## MVP
 
-- 
+- Plan!
+- Create React architecture skeleton
+- Capture data from API's
+- Display data from API's
+- Implement mobile-first design
+- Implement tablet design
+- Implement basic desktop design
+- Programmatically locate sun icon on page
+- Programmatically locate moon icon on page
+- Complete styling using SCSS
 
 ## PostMVP 
 
-- 
+- Add a daily sun graph
+- Add a yearly sun graph
+- Use IP address to determine location on load
+- Collect additional data from other API's if possible (eclipse, supermoon, etc)
 
 ## Project Schedule
 
 |  Day | Deliverable | Status
 |---|---| ---|
 |Day 1 - Wednesday | Proof of Concept | Complete
-|Day 2 - Thursday | Project Description, Wireframes | Incomplete
-|Day 3 - Friday | Complete Project Plan | Incomplete
-|Day 5 - Sunday | Core Application Structure (React arch.) | Incomplete
-|Day 6 - Monday | API Calls | Incomplete
-|Day 7 - Tuesday | CSS | Incomplete
+|Day 2 - Thursday | Project Description, Wireframes | Complete
+|Day 3 - Friday | Complete Project Plan, Core Application Structure | Incomplete
+|Day 5 - Sunday | API Calls | Incomplete
+|Day 6 - Monday | Mobile, Tablet, basic Desktop design with SCSS | Incomplete
+|Day 7 - Tuesday | Dynamic Sun and Moon icon positioning with SCSS | Incomplete
 |Day 8 - Wednesday | Post-MVP | Incomplete
-|Day 9 - Thursday | Final Touches | Incomplete
+|Day 9 - Thursday | Post-MVP, Final Touches | Incomplete
 |Day 10 - Friday | Present | Incomplete
 
 ## MVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| placeholder | H | hr | hr |
-| Total | H | hrs| hrs |
+| Plan | H | 2hr | hr |
+| Create React architecture | H | 2hr | hr |
+| Capture data from API's | H | 1.5hr | hr |
+| Display data from API's | H | 2hr | hr |
+| Implement mobile-first design | H | 1.5hr | hr |
+| Implement tablet design | H | 2hr | .5hr |
+| Implement basic desktop design | H | 1.5hr | hr |
+| Programmatically locate sun icon - azimuth | M | 2.5hr | hr |
+| Programmatically locate sun icon - altitude | M | 2hr | hr |
+| Programmatically locate moon icon - azimuth | M | 1hr | hr |
+| Programmatically locate moon icon - altitude | M | 1hr | hr |
+| Complete SCSS styling | M | 3hr | hr |
+| Total | H | 20hrs| hrs |
 
 ## PostMVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| placeholder | M | hr | hr |
-| Total | H | hrs| hrs |
+| Daily sun graph | M | 1.5hr | hr |
+| Yearly sun graph - assemble data | M | 2hr | hr |
+| Yearly sun graph - display data | M | 2hr | hr |
+| Use IP address location | M | 2hr | hr |
+| Programmatically show Moon icon with actual illumination | M | 2.5hr | hr |
+| Programmatically color background for day/night | M | 1hr | hr |
+| Find more fun data! | M | ∞hr | hr |
+| Total | H | 11hrs| hrs |
 
 ## React Architecture
 
-
+- [Link](https://docs.google.com/drawings/d/1OuY0BjoTJzHHEURq72qBJ17AxadJhG1L7sSUia__Jwc/edit?usp=sharing)
 
 ## Additional Libraries
 
-- 
+- SASS
 
 ## Code Snippet
 

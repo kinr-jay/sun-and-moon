@@ -1,6 +1,6 @@
 import React from "react";
 
-const Moon = () => {
+const MoonPage = () => {
   return (
     <div className="moon">
       <h1>Moon Page</h1>
@@ -8,4 +8,4 @@ const Moon = () => {
   );
 };
 
-export default Moon;
+export default MoonPage;

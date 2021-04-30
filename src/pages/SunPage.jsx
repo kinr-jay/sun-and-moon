@@ -1,6 +1,6 @@
 import React from "react";
 
-const Sun = () => {
+const SunPage = () => {
   return (
     <div className="sun">
       <h1>Sun Page</h1>
@@ -8,4 +8,4 @@ const Sun = () => {
   );
 };
 
-export default Sun;
+export default SunPage;
