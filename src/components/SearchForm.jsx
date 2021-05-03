@@ -1,10 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { useHistory, useLocation } from "react-router";
+
+import { LocationContext } from "../App.jsx";
 
 const SearchForm = () => {
+  let history = useHistory();
+  let location = useLocation();
+  
+  const setLocation = useContext(LocationContext).setLocation;
+
   const [searchInput, setSearchInput] = useState("");
 
   const handleChange = (event) => {
     setSearchInput(event.target.value);
+  };
+
+  const handleSubmit = () => {
+    setLocation(searchInput);
+    location.pathname === "/" && history.push("/sun");
   };
 
   return (
@@ -17,7 +30,7 @@ const SearchForm = () => {
         value={searchInput}
         onChange={handleChange}
       />
-      <button type="button" name="submit">
+      <button type="button" name="submit" onClick={handleSubmit}>
         Search
       </button>
     </div>
