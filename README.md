@@ -4,6 +4,11 @@
 
 **PROJECT AUTHOR:** Connor Jacobs
 
+## Links
+
+[GitHub Repo](https://github.com/kinr-jay/sun-and-moon)
+[Live Application](https://sun-and-moon.netlify.app/)
+
 ## Project Description
 
 Sun and Moon is a web application that allows the user to search using a city/state/country or geographic coordinates
