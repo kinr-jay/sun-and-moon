@@ -161,5 +161,13 @@ displayed. There will be separate pages for the sun and the moon. The user will 
 
 ## Issues and Resolutions
 
+```
+Warning: Can't call setState on a component that is not yet mounted. This is a no-op, but it might indicate a bug in your application. Instead, assign to `this.state` directly or define a `state = {};` class property with the desired state in the Media component.
+```
+
+```
+Warning: Can't perform a React state update on an unmounted component. This is a no-op, but it indicates a memory leak in your application. To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmount method.
+at Media (http://localhost:3000/static/js/vendors~main.chunk.js:33340:30)
+```
 
 
