@@ -170,4 +170,7 @@ Warning: Can't perform a React state update on an unmounted component. This is a
 at Media (http://localhost:3000/static/js/vendors~main.chunk.js:33340:30)
 ```
 
+```
+Warning: <Route> elements should not change from controlled to uncontrolled (or vice versa). You provided a "location" prop initially but omitted it on a subsequent render.
+```
 
