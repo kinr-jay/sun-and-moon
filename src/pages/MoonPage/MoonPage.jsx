@@ -2,7 +2,9 @@ import React from "react";
 
 import Header from "../../components/Header";
 import SearchForm from "../../components/SearchForm";
-import MoonData from "../../components/MoonData";
+import MoonData from "../../components/DataDisplays/MoonData";
+
+import "./moonpage.scss";
 
 const MoonPage = () => {
   return (

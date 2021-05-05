@@ -2,7 +2,9 @@ import React from "react";
 
 import Header from "../../components/Header";
 import SearchForm from "../../components/SearchForm";
-import SunData from "../../components/SunData";
+import SunData from "../../components/DataDisplays/SunData";
+
+import "./sunpage.scss";;
 
 const SunPage = () => {
   return (

@@ -1,36 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;700&family=Monofett&family=Zen+Dots&display=swap');
 
-body {
-    background-color: black;
-    font-family: "Jura", sans-serif;
-}
-
-
 .landing {
     text-align: center;
+    width: 100%;
+    margin: 0;
     
     h1 {
         font-family: "Zen Dots", sans-serif;
         font-size: 40px;
     }
 
-    button, label, input {
-        font-family: "Jura", sans-serif;
-        font-size: 18px;
+    img {
+        height: auto;
+        width: 100%;
     }
-
-    .center-box {
-        display: inline-block;
-        margin: 0 auto;
-        position: relative;
-        
-        .landing-text {
-            color: white;
-            text-align: left;
-            position: absolute;
-            bottom: 12%;
-            left: 0;
-            padding: 0 40px;
+    
+    .search-inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    
+        button {
+            position: relative;
+            left: 105px;
         }
+    }
+}
+
+.center-box {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    
+}
+
+.landing-text {
+        color: white;
+        text-align: left;
+        padding: 0 40px;
+}
+
+@media screen and (min-width: 1024px) {
+    .landing-text {
+        position: absolute;
+        bottom: 12%;
+        left: 0;
     }
 }

@@ -12,7 +12,7 @@ export const LocationContext = createContext(null);
 
 function App() {
 
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 726px)" });
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   const [location, setLocation] = useState(null);
   

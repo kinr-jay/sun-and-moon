@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
-import { LocationContext } from "../App.jsx";
-import { useIPG } from "../api-calls/useIPG";
-import { useFarmsense } from "../api-calls/useFarmsense";
+import { LocationContext } from "../../App.jsx";
+import { useIPG } from "../../api-calls/useIPG";
+import { useFarmsense } from "../../api-calls/useFarmsense";
+
+import "./moondata.scss";
 
 const MoonData = () => {
   const location = useContext(LocationContext).location;
@@ -29,14 +31,14 @@ const MoonData = () => {
     return (
       <div className="moondata">
         <h1>Howl at the moon. Awwoooo!!</h1>
-        <h2>
-          {location}, {ipgData.location.state}
+        <h2 className="mobile-location-header">
+          {location.city}, {location.state}
         </h2>
         <div className="data-grid">
           <p>Moonrise: {ipgData.moonrise}</p>
           <p>Moonset: {ipgData.moonset}</p>
           <p>Phase: {farmsenseData.Phase}</p>
-          <p>Illumination: {farmsenseData.Illumination.toFixed(2) * 100}%</p>
+          <p>Illumination: {(farmsenseData.Illumination * 100).toFixed(2)}%</p>
           <p>Altitude: {ipgData.moon_altitude.toFixed(2)}&deg;</p>
           <p>Azimuth: {ipgData.moon_azimuth.toFixed(2)}&deg;</p>
           <p>Distance: {(ipgData.moon_distance * 0.621371).toFixed(0)} miles</p>
