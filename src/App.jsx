@@ -1,14 +1,10 @@
 import React, { useState, createContext } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import { useMediaQuery } from "react-responsive"
-// import Media from "react-media";
+import { useMediaQuery } from "react-responsive";
 
-import HomePage from "./pages/HomePage"
-import RouteLogic from "./components/RouteLogic"
-// import SunPage from "./pages/SunPage"
-// import MoonPage from "./pages/MoonPage"
-// import DesktopPage from "./pages/DesktopPage";
+import HomePage from "./pages/HomePage/HomePage";
+import RouteLogic from "./components/RouteLogic";
 
 import "./App.scss";
 
@@ -16,7 +12,7 @@ export const LocationContext = createContext(null);
 
 function App() {
 
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 726px" });
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 726px)" });
 
   const [location, setLocation] = useState(null);
   

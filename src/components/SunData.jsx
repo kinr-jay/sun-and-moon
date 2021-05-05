@@ -1,24 +1,14 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { LocationContext } from "../App.jsx";
+import { useIPG } from "../api-calls/useIPG";
 
 const SunData = () => {
   const location = useContext(LocationContext).location;
-
-  const ipgApiKey = "c219cd1bd2f04e179ca9bb7d441e4493";
-  const [ipgData, setIpgData] = useState(null);
-
-  const getIpgData = async () => {
-    const response = await fetch(
-      `https://api.ipgeolocation.io/astronomy?apiKey=${ipgApiKey}&location=${location},%20US`
-    );
-    const data = await response.json();
-    console.log(data);
-    setIpgData(data);
-  };
+  const [ipgData, setIpgData] = useIPG(null);
 
   React.useEffect(() => {
-    getIpgData();
-  }, []);
+    setIpgData(location);
+  }, [location]);
 
   const loading = () => {
     return <h1>Loading...</h1>;
@@ -36,9 +26,13 @@ const SunData = () => {
           <p>Sunset: {ipgData.sunset}</p>
           <p>Solar Noon: {ipgData.solar_noon}</p>
           <p>Daylight: {ipgData.day_length}</p>
-          <p>Altitude: {ipgData.sun_altitude}</p>
-          <p>Azimuth: {ipgData.sun_azimuth}</p>
-          <p>Distance: {ipgData.sun_distance}</p>
+          <p>Altitude: {ipgData.sun_altitude.toFixed(2)}&deg;</p>
+          <p>Azimuth: {ipgData.sun_azimuth.toFixed(2)}&deg;</p>
+          <p>
+            Distance:{" "}
+            {(ipgData.sun_distance * 0.621371).toLocaleString().split(".")[0]}{" "}
+            miles
+          </p>
         </div>
       </div>
     );

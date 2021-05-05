@@ -122,8 +122,8 @@ displayed. There will be separate pages for the sun and the moon. The user will 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
 | Plan | H | 2hr | hr |
-| Create React architecture | H | 2hr | hr |
-| Capture data from API's | H | 1.5hr | hr |
+| Create React architecture | H | 2hr | 6hr |
+| Capture data from API's | H | 1.5hr | 1hr |
 | Display data from API's | H | 2hr | hr |
 | Implement mobile-first design | H | 1.5hr | hr |
 | Implement tablet design | H | 2hr | .5hr |
@@ -151,8 +151,11 @@ displayed. There will be separate pages for the sun and the moon. The user will 
 
 - [Link](https://docs.google.com/drawings/d/1OuY0BjoTJzHHEURq72qBJ17AxadJhG1L7sSUia__Jwc/edit?usp=sharing)
 
-## Additional Libraries
+## Key Libraries
 
+- Reactjs
+- React Router
+- React Responsive
 - SASS
 
 ## Code Snippet

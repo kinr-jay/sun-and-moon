@@ -1,7 +1,8 @@
 import React from "react";
 
-import Header from "../components/Header";
-import SearchForm from "../components/SearchForm";
+import Header from "../../components/Header";
+import SearchForm from "../../components/SearchForm";
+import MoonData from "../../components/MoonData";
 
 const MoonPage = () => {
   return (
@@ -9,6 +10,7 @@ const MoonPage = () => {
       <Header />
       <SearchForm />
       <h1>Moon Page</h1>
+      <MoonData />
     </div>
   );
 };
