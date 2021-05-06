@@ -10,8 +10,21 @@
 
         button {
             position: relative;
-            right: 21px;
+            right: 22px;
         }
+    }
+
+    .the-sun, .the-moon {
+        margin: 0 40px;
+        height: 300px;
+        width: 300px;
+    }
+
+    .data {
+        align-self: stretch;
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 40px;
     }
 }
 
@@ -21,15 +34,7 @@
     justify-content: space-evenly;
 }
 
-.the-sun, .the-moon {
-    margin: 0 40px;
-}
 
-.data {
-    align-self: stretch;
-    display: flex;
-    justify-content: space-evenly;
-}
 
 .mobile-location-header {
     display: none;

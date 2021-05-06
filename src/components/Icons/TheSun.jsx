@@ -8,8 +8,8 @@ const TheSun = ({ sunAzimuth }) => {
   return (
     <svg
       className="the-sun"
-      width="300pt"
-      height="300pt"
+      width="200pt"
+      height="200pt"
       viewBox="0 0 1280 1254"
       preserveAspectRatio="xMidYMid meet"
     >

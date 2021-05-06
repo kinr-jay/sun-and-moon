@@ -8,7 +8,7 @@ import { useFarmsense } from "../../api-calls/useFarmsense";
 // Component imports
 import Header from "../../components/Header";
 import SearchForm from "../../components/SearchForm";
-import TheMoon from "../../components/icons/TheMoon";
+import TheMoon from "../../components/Icons/TheMoon";
 import MoonData from "../../components/DataDisplays/MoonData";
 
 // SCSS import

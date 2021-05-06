@@ -9,8 +9,8 @@ const TheMoon = ({ moonAzimuth }) => {
   return (
     <svg
       className="the-moon"
-      width="300pt"
-      height="300pt"
+      width="200pt"
+      height="200pt"
       viewBox="0 0 1280 1254"
       preserveAspectRatio="xMidYMid meet"
     >
@@ -414,9 +414,10 @@ c-15 188 -57 297 -131 341 -49 28 -115 31 -160 7z"
       >
         <g
           transform={`translate(${x},${y}) scale(0.012,0.012)`}
-          fill="#a3a3a3" 
+          fill="#a3a3a3"
           stroke="black"
-          strokeWidth="180px">
+          strokeWidth="180px"
+        >
           <path
             d="M5510 12791 c-8 -5 -107 -25 -220 -46 -526 -95 -791 -157 -1080 -254
             -332 -112 -527 -197 -983 -429 l-308 -157 -440 -352 -440 -352 -161 -183

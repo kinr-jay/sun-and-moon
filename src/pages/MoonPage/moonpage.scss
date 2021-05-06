@@ -1,4 +1,8 @@
 .moon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     .header a:nth-of-type(3) {
         color: black;
         background-color: white;
@@ -12,7 +16,11 @@
 
         button {
             position: relative;
-            right: 21px;
+            right: 22px;
         }
+    }
+
+    .the-moon {
+        margin: 20px 0;
     }
 }

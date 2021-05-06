@@ -7,7 +7,7 @@ import { useIPG } from "../../api-calls/useIPG";
 // Component imports
 import Header from "../../components/Header";
 import SearchForm from "../../components/SearchForm";
-import TheSun from "../../components/icons/TheSun";
+import TheSun from "../../components/Icons/TheSun";
 import SunData from "../../components/DataDisplays/SunData";
 
 // SCSS import
@@ -34,9 +34,8 @@ const SunPage = () => {
       <div className="sun">
         <Header />
         <SearchForm />
-        <h1>Sun Page</h1>
-        <TheSun sunAzimuth={ipgData.sun_azimuth}/>
-        <SunData ipgData={ipgData}  />
+        <TheSun sunAzimuth={ipgData.sun_azimuth} />
+        <SunData ipgData={ipgData} />
       </div>
     );
   };
