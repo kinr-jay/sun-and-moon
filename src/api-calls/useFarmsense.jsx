@@ -6,7 +6,7 @@ export const useFarmsense = () => {
   const getFarmsenseData = async () => {
     const unixTimeStamp = Math.round(new Date().getTime() / 1000);
     const response = await fetch(
-      `http://api.farmsense.net/v1/moonphases/?d=${unixTimeStamp}`
+      `https://api.farmsense.net/v1/moonphases/?d=${unixTimeStamp}`
     );
     const data = await response.json();
     setFarmsenseData(data[0]);
