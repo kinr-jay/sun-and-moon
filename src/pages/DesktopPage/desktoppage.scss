@@ -1,3 +1,36 @@
-.data {
+.desktop {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .search-inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        button {
+            position: relative;
+            right: 21px;
+        }
+    }
+}
+
+.icons {
+    display: flex;
+    align-self: stretch;
+    justify-content: space-evenly;
+}
+
+.the-sun, .the-moon {
+    margin: 0 40px;
+}
+
+.data {
+    align-self: stretch;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mobile-location-header {
+    display: none;
 }

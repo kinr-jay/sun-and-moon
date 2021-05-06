@@ -26,7 +26,7 @@ const SearchForm = () => {
   return (
     <div className="search-inputs">
       <div className="city-input">
-        <label htmlFor="city">City Name: </label>
+        <label htmlFor="city">City: </label>
         <input
           type="text"
           name="city"

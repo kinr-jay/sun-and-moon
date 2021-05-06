@@ -5,8 +5,10 @@ export const useIPG = () => {
   const [ipgData, setIpgData] = useState(null);
 
   const getIpgData = async ({ city, state }) => {
+    const formattedCity = city.split(" ").join("%20");
+    const formattedState = state.split(" ").join("%20");
     const response = await fetch(
-      `https://api.ipgeolocation.io/astronomy?apiKey=${ipgApiKey}&location=${city},${state},%20US`
+      `https://api.ipgeolocation.io/astronomy?apiKey=${ipgApiKey}&location=${formattedCity},${formattedState},%20US`
     );
     const data = await response.json();
     setIpgData(data);

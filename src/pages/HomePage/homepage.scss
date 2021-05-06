@@ -18,11 +18,11 @@
     .search-inputs {
         display: flex;
         flex-direction: column;
-        align-items: start;
+        align-items: flex-start;
     
         button {
             position: relative;
-            left: 105px;
+            left: 75px;
         }
     }
 }

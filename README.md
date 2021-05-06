@@ -124,16 +124,16 @@ displayed. There will be separate pages for the sun and the moon. The user will 
 | Plan | H | 2hr | hr |
 | Create React architecture | H | 2hr | 6hr |
 | Capture data from API's | H | 1.5hr | 1hr |
-| Display data from API's | H | 2hr | hr |
-| Implement mobile-first design | H | 1.5hr | hr |
-| Implement tablet design | H | 2hr | .5hr |
+| Display data from API's | H | 2hr | 1.5hr |
+| Implement mobile-first design | H | 1.5hr | 4hr |
+| Implement tablet design | H | .5hr | .25hr |
 | Implement basic desktop design | H | 1.5hr | hr |
 | Programmatically locate sun icon - azimuth | M | 2.5hr | hr |
 | Programmatically locate sun icon - altitude | M | 2hr | hr |
 | Programmatically locate moon icon - azimuth | M | 1hr | hr |
 | Programmatically locate moon icon - altitude | M | 1hr | hr |
 | Complete SCSS styling | M | 3hr | hr |
-| Total | H | 20hrs| hrs |
+| Total | H | 18.5hrs| hrs |
 
 ## PostMVP
 | Component | Priority | Estimated Time | Actual Time |
