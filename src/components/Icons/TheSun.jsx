@@ -1,7 +1,7 @@
 import React from "react";
 
 const TheSun = ({ sunAzimuth }) => {
-  // Transform the azimuth values for the sun and moon to points on a svg coordinate system.
+  // Transform the azimuth value for the sun to point locations on a svg coordinate system.
   let x = 512 + 394 * Math.cos((Math.PI / 180) * -(sunAzimuth - 90));
   let y = 764 - 394 * Math.sin((Math.PI / 180) * -(sunAzimuth - 90));
 

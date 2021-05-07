@@ -1,10 +1,9 @@
 import React from "react";
 
 const TheMoon = ({ moonAzimuth }) => {
+  // Transform the azimuth value for the moon to point locations on a svg coordinate system.
   let x = 422 + 296 * Math.cos((Math.PI / 180) * -(moonAzimuth - 90));
-  console.log(x);
   let y = 393 - 296 * Math.sin((Math.PI / 180) * -(moonAzimuth - 90));
-  console.log(y);
 
   return (
     <svg

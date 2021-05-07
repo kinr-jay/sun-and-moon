@@ -123,17 +123,15 @@ displayed. There will be separate pages for the sun and the moon. The user will 
 | --- | :---: |  :---: | :---: | 
 | Plan | H | 2hr | hr |
 | Create React architecture | H | 2hr | 6hr |
-| Capture data from API's | H | 1.5hr | 1hr |
-| Display data from API's | H | 2hr | 1.5hr |
+| Capture data from API's | H | 1.5hr | 2hr |
+| Display data from API's | H | 2hr | 2hr |
 | Implement mobile-first design | H | 1.5hr | 4hr |
 | Implement tablet design | H | .5hr | .25hr |
-| Implement basic desktop design | H | 1.5hr | hr |
-| Programmatically locate sun icon - azimuth | M | 2.5hr | hr |
-| Programmatically locate sun icon - altitude | M | 2hr | hr |
-| Programmatically locate moon icon - azimuth | M | 1hr | hr |
-| Programmatically locate moon icon - altitude | M | 1hr | hr |
-| Complete SCSS styling | M | 3hr | hr |
-| Total | H | 18.5hrs| hrs |
+| Implement basic desktop design | H | 1.5hr | 1.5hr |
+| Programmatically locate sun icon - azimuth | M | 2.5hr | 2.5hr |
+| Programmatically locate moon icon - azimuth | M | 1hr | 1.5hr |
+| Complete SCSS styling | M | 3hr | 2.5hr |
+| Total | H | 18.5hrs| 22.25hrs |
 
 ## PostMVP
 | Component | Priority | Estimated Time | Actual Time |
@@ -160,20 +158,28 @@ displayed. There will be separate pages for the sun and the moon. The user will 
 
 ## Code Snippet
 
+One of the cool parts of this project was programmatically positioning a sun and moon icon on top of a compass rose to represent the azimuth of the celestial object with respect to an observer at the queried location. The following two lines run the calculations necessary for transforming the azimuths into a point location on a coordinate grid within an svg element.
 
+The first value in each location represents the origin for the respective axis within the svg element. The second value is the magnitude required to move the object from the origin to the edge of the compass rose. 
+
+Sun Azimuth
+```js
+let x = 512 + 394 * Math.cos((Math.PI / 180) * -(sunAzimuth - 90));
+let y = 764 - 394 * Math.sin((Math.PI / 180) * -(sunAzimuth - 90));
+```
+
+Moon Azimuth
+```js
+let x = 422 + 296 * Math.cos((Math.PI / 180) * -(moonAzimuth - 90));
+let y = 393 - 296 * Math.sin((Math.PI / 180) * -(moonAzimuth - 90));
+```
 
 ## Issues and Resolutions
 
-```
-Warning: Can't call setState on a component that is not yet mounted. This is a no-op, but it might indicate a bug in your application. Instead, assign to `this.state` directly or define a `state = {};` class property with the desired state in the Media component.
-```
-
-```
-Warning: Can't perform a React state update on an unmounted component. This is a no-op, but it indicates a memory leak in your application. To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmount method.
-at Media (http://localhost:3000/static/js/vendors~main.chunk.js:33340:30)
-```
+When using the React Responsive library, I was getting a warning stating the following:
 
 ```
 Warning: <Route> elements should not change from controlled to uncontrolled (or vice versa). You provided a "location" prop initially but omitted it on a subsequent render.
 ```
 
+My app was completely functional, but this warning drove me nuts. (Most do if I can't figure out what's going on.) Of course, it was something as simple as wrapping everything in a React JSX fragment. Basic idea is that I was using a ternary operator to conditionally render a set of page components based on the size of the screen. While each of the JSX blocks in each section of the conditional statement were wrapped in a fragment, the whole thing needed one as well for the code under the hood to be happy. Easy!
