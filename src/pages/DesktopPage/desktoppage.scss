@@ -26,16 +26,14 @@
         justify-content: space-evenly;
         margin-left: 40px;
     }
+
+    .mobile-location-header {
+        display: none;
+    }
 }
 
 .icons {
     display: flex;
     align-self: stretch;
     justify-content: space-evenly;
-}
-
-
-
-.mobile-location-header {
-    display: none;
 }

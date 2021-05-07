@@ -41,7 +41,6 @@ const MoonPage = () => {
       <div className="moon">
         <Header />
         <SearchForm />
-        <h1>Moon Page</h1>
         <TheMoon moonAzimuth={ipgData.moon_azimuth} />
         <MoonData ipgData={ipgData} farmsenseData={farmsenseData} />
       </div>
