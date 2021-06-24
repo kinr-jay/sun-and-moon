@@ -3,7 +3,7 @@
 import React, { useContext } from "react";
 import { LocationContext } from "../../App.jsx";
 import { useIPG } from "../../api-calls/useIPG";
-import { useFarmsense } from "../../api-calls/useFarmsense";
+import { useStormglass } from "../../api-calls/useStormglass"
 
 // Component imports
 import Header from "../../components/Header";
@@ -25,10 +25,10 @@ const MoonPage = () => {
   }, [location]);
 
   // API Call for Farmsense API. Date in Unix Timestamp.
-  const [farmsenseData, setFarmsenseData] = useFarmsense(null);
+  const [stormglassData, setStormglassData] = useStormglass(null)
 
   React.useEffect(() => {
-    setFarmsenseData();
+    setStormglassData(location)
   }, [location]);
 
   // JSX to render when data is loading vs loaded.
@@ -42,12 +42,12 @@ const MoonPage = () => {
         <Header />
         <SearchForm />
         <TheMoon moonAzimuth={ipgData.moon_azimuth} />
-        <MoonData ipgData={ipgData} farmsenseData={farmsenseData} />
+        <MoonData ipgData={ipgData} stormglassData={stormglassData} />
       </div>
-    );
+    )
   };;;
 
-  return ipgData && farmsenseData ? loaded() : loading();
+  return ipgData && stormglassData ? loaded() : loading()
 };
 
 export default MoonPage;

@@ -3,7 +3,7 @@
 import React, { useContext } from "react";
 import { LocationContext } from "../../App.jsx";
 import { useIPG } from "../../api-calls/useIPG";
-import { useFarmsense } from "../../api-calls/useFarmsense";
+import { useStormglass } from "../../api-calls/useStormglass"
 
 // Component imports
 import SearchForm from "../../components/SearchForm";
@@ -26,10 +26,10 @@ const DesktopPage = () => {
   }, [location]);
 
   // API Call for Farmsense API. Date in Unix Timestamp.
-  const [farmsenseData, setFarmsenseData] = useFarmsense(null);
+  const [stormglassData, setStormglassData] = useStormglass(null)
 
   React.useEffect(() => {
-    setFarmsenseData();
+    setStormglassData(location)
   }, [location]);
 
   // Renders for when API data is loading and loaded
@@ -40,21 +40,23 @@ const DesktopPage = () => {
   const loaded = () => {
     return (
       <div className="desktop">
-        <SearchForm  />
+        <SearchForm />
         <div className="icons">
           <TheSun sunAzimuth={ipgData.sun_azimuth} />
           <TheMoon moonAzimuth={ipgData.moon_azimuth} />
         </div>
-        <h2>{ipgData.location.city}, {ipgData.location.state}</h2>
+        <h2>
+          {ipgData.location.city}, {ipgData.location.state}
+        </h2>
         <div className="data">
           <SunData ipgData={ipgData} />
-          <MoonData ipgData={ipgData} farmsenseData={farmsenseData} />
+          <MoonData ipgData={ipgData} stormglassData={stormglassData} />
         </div>
       </div>
-    );
+    )
   }
 
-  return ipgData && farmsenseData ? loaded() : loading();
+  return ipgData && stormglassData ? loaded() : loading()
 };
 
 export default DesktopPage;
