@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { positionstack } from "./positionstack"
+import { locationIQ } from "./locationIQ"
 
 export const useStormglass = () => {
   const [stormglassData, setStormglassData] = useState(null)
@@ -11,7 +11,7 @@ export const useStormglass = () => {
   const getStormglassData = async ({ city, state }) => {
     const formattedCity = city.split(" ").join("%20")
     const formattedState = state.split(" ").join("%20")
-    const coords = await positionstack(formattedCity, formattedState)
+    const coords = await locationIQ(formattedCity, formattedState)
     const response = await fetch(
       `${url}?lat=${coords.latitude}&lng=${coords.longitude}`,
       {
