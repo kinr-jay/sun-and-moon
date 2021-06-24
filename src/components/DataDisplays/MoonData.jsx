@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react"
+import { LocationContext } from "../../App.jsx"
 import "./moondata.scss";
 
 const MoonData = ({ ipgData, stormglassData }) => {
+
+  const location = useContext(LocationContext).location
 
   let illumination = 0
 
@@ -15,7 +18,7 @@ const MoonData = ({ ipgData, stormglassData }) => {
   return (
     <div className="moondata">
       <h2 className="mobile-location-header">
-        {ipgData.location.city}, {ipgData.location.state}
+        {location.city}, {location.state}
       </h2>
       <div className="data-grid">
         <p>Moonrise: {ipgData.moonrise}</p>

@@ -1,11 +1,13 @@
-import React from "react";
-import "./sundata.scss";
+import React, { useContext } from "react"
+import { LocationContext } from "../../App.jsx"
+import "./sundata.scss"
 
 const SunData = ({ ipgData }) => {
+  const location = useContext(LocationContext).location
   return (
     <div className="sundata">
       <h2 className="mobile-location-header">
-        {ipgData.location.city}, {ipgData.location.state}
+        {location.city}, {location.state}
       </h2>
       <div className="data-grid">
         <p>Sunrise: {ipgData.sunrise}</p>
@@ -21,7 +23,7 @@ const SunData = ({ ipgData }) => {
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SunData;
+export default SunData

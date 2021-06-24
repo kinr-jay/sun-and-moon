@@ -46,7 +46,7 @@ const DesktopPage = () => {
           <TheMoon moonAzimuth={ipgData.moon_azimuth} />
         </div>
         <h2>
-          {ipgData.location.city}, {ipgData.location.state}
+          {location.city}, {location.state}
         </h2>
         <div className="data">
           <SunData ipgData={ipgData} />
